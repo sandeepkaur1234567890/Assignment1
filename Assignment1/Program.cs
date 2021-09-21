@@ -56,7 +56,9 @@ namespace Assignment1
 		/// <returns>A string that represents the value of a card</returns>
 		private static string RandomValue()
 		{
-			throw new NotImplementedException();
+			var random_value = new List<string> { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king" };
+			int faces = random.Next(random_value.Count);
+			return random_value[faces];
 		}
 		/// <summary>
 		/// Chooses a random suit for a card (Clubs, Diamonds, Hearts, Spades)
@@ -64,7 +66,9 @@ namespace Assignment1
 		/// <returns>A string that represents the suit of a card.</returns>
 		private static string RandomSuit()
 		{
-			throw new NotImplementedException();
+			var random_suit = new List<string> { "Hearts", "Clubs", "Diamonds", "Spades" };
+			int suits = random.Next(random_suit.Count);
+			return random_suit[suits];
 		}
 	}
 }
