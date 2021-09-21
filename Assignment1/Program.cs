@@ -47,8 +47,8 @@ namespace Assignment1
 		/// <returns>An array of strings where each string represents a card.</returns>
 		public static string[] PickSomeCards(int numCards)
 		{
-			// Use RandomValue() & RandomSuit() to help you here
-			throw new NotImplementedException();
+			RandomValue();
+			RandomSuit();
 		}
 		/// <summary>
 		/// Chooses a random value for a card (Ace, 2, 3, ... , Queen, King)
@@ -56,9 +56,7 @@ namespace Assignment1
 		/// <returns>A string that represents the value of a card</returns>
 		private static string RandomValue()
 		{
-			var random_value = new List<string> { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king" };
-			int faces = random.Next(random_value.Count);
-			return random_value[faces];
+			string[] faces = { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king" };
 		}
 		/// <summary>
 		/// Chooses a random suit for a card (Clubs, Diamonds, Hearts, Spades)
@@ -66,9 +64,7 @@ namespace Assignment1
 		/// <returns>A string that represents the suit of a card.</returns>
 		private static string RandomSuit()
 		{
-			var random_suit = new List<string> { "Hearts", "Clubs", "Diamonds", "Spades" };
-			int suits = random.Next(random_suit.Count);
-			return random_suit[suits];
+			string[] suits = { "Hearts", "Clubs", "Diamonds", "Spades" };
 		}
 	}
 }
